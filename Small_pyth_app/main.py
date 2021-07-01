@@ -1,17 +1,28 @@
-# This is a sample Python script.
+
+import random
+import string
+
+pass_lenght=int(input("Enter the length of password (8+):"))
+while True:
+    if pass_lenght<8:
+        pass_lenght = int(input("Enter the length of password (8+):"))
+    else:
+        break;
+
+letters_lowercase = string.ascii_lowercase
+letters_uppercase = string.ascii_uppercase
+digits = string.digits
+punctations =  string.punctuation
 
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+chars=letters_lowercase+letters_uppercase+digits+punctations
 
+password = random.choices(chars, k=pass_lenght)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+password = "".join(password)
 
+pass_data_special_= ""
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(pass_lenght)
+print(password)
+#print(punctations)
