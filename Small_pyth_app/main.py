@@ -23,6 +23,8 @@ password = "".join(password)
 
 pass_data_special_= ""
 
+
+
 print(pass_lenght)
 print(password)
 #print(punctations)
